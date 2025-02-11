@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Switch, Text} from 'react-native';
+import {View, Switch} from 'react-native';
 import {ThemeContext} from './src/context/themeContext';
 import MainPage from './src/screens/main';
 import {colors} from './src/styles/colors';

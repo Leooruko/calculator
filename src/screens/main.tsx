@@ -3,6 +3,7 @@ import {Text, View} from 'react-native';
 import DisplayScreen from '../components/screen';
 import Button from '../components/button';
 import {Styles} from '../styles/global';
+import {calculate} from '../lib/calculator';
 export default function MainPage() {
   const [firstNumber, setFirstNumber] = useState('0');
   const [secondNumber, setSecondNumber] = useState<number | null>(null);
@@ -41,7 +42,7 @@ export default function MainPage() {
           setFirstNumber(firstNumber + title);
         }
         try {
-          setSecondNumber(Number(firstNumber));
+          setSecondNumber(calculate(firstNumber));
         } catch (e) {
           console.log(e);
         }
